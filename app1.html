@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link rel="manifest" href="manifest.json">
+
+    <!-- un-comment this code to enable service worker
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(() => console.log('service worker installed'))
+          .catch(err => console.log('Error', err));
+      }
+    </script>-->
+
+  
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    
+  </head>
+  <body >
+
+   <div class="demo-text">
+  <h2>Simple File Upload Form</h2>
+  <p>This form uploads a file to a spreadsheet and shared folder connected to this project.</p>
+  
+  <p>It only took a few simple steps:</p>
+  <ol>
+    <li>Set the form action to the project's API endpoint</li>
+    <li>Set the form's <code>enctype</code> attribute to <code>multipart/form-data</code>. This tells the browser to send a file</li>
+    <li>Add a file input button</li>
+    <li>Create columns in your spreadsheet matching the names of the form elements</li>
+  </ol>
+
+  <p>Click Publish to find out how to put this widget on your site.</p>
+</div>
+
+<form enctype="multipart/form-data" method="POST" action="//api.cloudstitch.com/kubopages/photo_upload/datasources/sheet" class="magic-form">
+  <div class="form-group">
+    <label><b>First Name </b></label>
+    <input name="FirstName" class="form-control">
+  </div>
+  <div class="form-group">
+    <label><b>Last Name </b></label>
+    <input name="LastName" class="form-control">
+  </div>
+  <div class="form-group">
+    <label><b>Photo </b></label>
+    <input type="file" name="Photo" class="form-control">
+  </div>
+  <div class="form-group">
+    <button type="submit" class="form-btn">Submit</button>
+  </div>
+</form>
+  </body>
+</html>
